@@ -18,7 +18,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('lot.jpg'),
               					),
               				title: Text("Legends of Tomrrow"),
               				subtitle: Text("More info")
@@ -34,7 +34,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('arrow.jpg'),
               					),
               				title: Text("Arrow"),
               				subtitle: Text("More info")
@@ -50,7 +50,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('ehc.jpg'),
               					),
               				title: Text("Everybody Hates Chris"),
               				subtitle: Text("More info")
@@ -66,7 +66,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('gotham.jpg'),
               					),
               				title: Text("Gotham"),
               				subtitle: Text("More info")
@@ -82,7 +82,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('tsr.jpg'),
               					),
               				title: Text("The Shawshank Redemption"),
               				subtitle: Text("More info")
@@ -98,7 +98,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('ttp.jpg'),
               					),
               				title: Text("The Tomorrow People"),
               				subtitle: Text("More info")
@@ -114,7 +114,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					//backgroundImage: AssetImage('coffee_icon.png'),
+              					backgroundImage: AssetImage('tsv.jpg'),
               					),
               				title: Text("Silicon Valley"),
               				subtitle: Text("More info")
@@ -124,6 +124,12 @@ class Movies extends StatelessWidget {
 					),
 				],
 			),
+				floatingActionButton: FloatingActionButton.extended(
+						backgroundColor: Colors.blue,
+						icon: const Icon(Icons.add),
+						label: const Text("Add Movies"),
+						onPressed: () => null,
+						),
 		);
 	}
 }

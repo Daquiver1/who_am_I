@@ -13,7 +13,7 @@ class MyHomePage extends StatelessWidget {
 					crossAxisAlignment: CrossAxisAlignment.center,
 					children: [
 					CircleAvatar(
-						backgroundImage: AssetImage('img1.jpg'),
+						backgroundImage: AssetImage('christian.jpg'),
 						radius: 150
 					),
 					SizedBox(height: 20.0),
@@ -41,6 +41,7 @@ class MyHomePage extends StatelessWidget {
 	                onPressed: () => null,
 	                child: Text('Simple Calculator'),
 	              ),
+					
 					],
 
 				),
