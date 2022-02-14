@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:who_am_i/screens/home/home.dart';
+import 'package:who_am_i/screens/movies/movies.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: Movies(),
     );
   }
 }
