@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:who_am_i/shared/constants.dart';
 
 
 class Movies extends StatelessWidget {
@@ -21,7 +23,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('lot.jpg'),
               					),
               				title: Text("Legends of Tomrrow"),
-              				subtitle: Text("More info")
+              				subtitle: Text("Top Tier Series. Constantine stay undefeated.")
               				),
 
 						),
@@ -37,7 +39,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('arrow.jpg'),
               					),
               				title: Text("Arrow"),
-              				subtitle: Text("More info")
+              				subtitle: Text("The best series I've ever watched. Rewatched all 8 seasons twice. Pretty Bird.")
               				),
 
 						),
@@ -53,7 +55,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('ehc.jpg'),
               					),
               				title: Text("Everybody Hates Chris"),
-              				subtitle: Text("More info")
+              				subtitle: Text("Funniest series I've ever watched. Chris Rock, kudos.")
               				),
 
 						),
@@ -69,7 +71,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('gotham.jpg'),
               					),
               				title: Text("Gotham"),
-              				subtitle: Text("More info")
+              				subtitle: Text("How can you not love Gotham? It's perfect! Everything, cast, plot, settings. *Chefs Kiss*")
               				),
 
 						),
@@ -85,7 +87,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('tsr.jpg'),
               					),
               				title: Text("The Shawshank Redemption"),
-              				subtitle: Text("More info")
+              				subtitle: Text("Mildred recommended this movie to me, good movie. Really good.")
               				),
 
 						),
@@ -101,7 +103,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('ttp.jpg'),
               					),
               				title: Text("The Tomorrow People"),
-              				subtitle: Text("More info")
+              				subtitle: Text("Watched this when I was 12. Been obessed ever since.")
               				),
 
 						),
@@ -117,7 +119,7 @@ class Movies extends StatelessWidget {
               					backgroundImage: AssetImage('tsv.jpg'),
               					),
               				title: Text("Silicon Valley"),
-              				subtitle: Text("More info")
+              				subtitle: Text("Season 1 of this series is a must watch for all tech student entreprenuers. No cap.")
               				),
 
 						),
@@ -128,7 +130,59 @@ class Movies extends StatelessWidget {
 						backgroundColor: Colors.blue,
 						icon: const Icon(Icons.add),
 						label: const Text("Add Movies"),
-						onPressed: () => null,
+						onPressed: () {
+							Get.bottomSheet(
+								Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+           // TextField for giving some Input
+           TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(
+                 borderSide: BorderSide(color: Colors.blue),
+               ),
+               hintText: "Type name",
+               hintStyle: TextStyle(color: Colors.grey),
+             ),
+           ),
+           SizedBox(height: 10),
+            TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(
+                 borderSide: BorderSide(color: Colors.blue),
+               ),
+               hintText: "Type description",
+               hintStyle: TextStyle(color: Colors.grey),
+             ),
+           ),
+            SizedBox(height: 10),
+             
+           //Button for adding items
+           RaisedButton(
+             color: Colors.black,
+             child: Text("ADD",style: TextStyle(color: Colors.white)),
+             onPressed: () => null,
+             ),
+         ],
+                    ),
+                  ),
+                ),
+                elevation: 20.0,
+                enableDrag: false,
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  )
+                )
+
+              );
+								// thebottomsheet,
+								// isDismissible: true);
+							},
 						),
 		);
 	}
