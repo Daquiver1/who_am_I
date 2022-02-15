@@ -21,9 +21,8 @@ class MyHomePage extends StatelessWidget {
 						radius: 150
 					),
 					SizedBox(height: 20.0),
-					Text("Hey, My name is Christian. Clearly I'm bored and have too much time on my hands."),
-					Text(" Click on the buttons below to find out my favorite activites."),
-					Text("I added a calculator to solidify my undestanding of flutter state management using Getx."),
+					Text("Hey, my name is Christian. Clearly I'm bored and have too much time on my hands."),
+					Text("Anyways, click on the buttons below to find out my favorite activites."),
 					SizedBox(height: 20.0),
 					ElevatedButton(
 	                onPressed: () => Get.to(Movies()),
@@ -43,7 +42,7 @@ class MyHomePage extends StatelessWidget {
 	              ),
 					SizedBox(height: 20.0),
 					ElevatedButton(
-	                onPressed: () => null,
+	                onPressed: () => Get,
 	                child: Text('Simple Calculator'),
 	              ),
 					

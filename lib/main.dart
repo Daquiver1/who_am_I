@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:who_am_i/screens/home/home.dart';
 import 'package:get/get.dart';
+import 'package:who_am_i/screens/calc/calc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: MyHomePage(),
+      home: Calc(),
     );
   }
 }
