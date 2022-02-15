@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:who_am_i/screens/home/home.dart';
-import 'package:who_am_i/screens/movies/movies.dart';
-import 'package:who_am_i/screens/passions/passions.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Passion(),
+      home: MyHomePage(),
     );
   }
 }

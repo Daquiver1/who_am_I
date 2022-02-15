@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:who_am_i/shared/constants.dart';
 
 
-class Movies extends StatelessWidget {
+class Songs extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
 			appBar: AppBar(
-				title: Text("Movies Page"),
+				title: Text("Songs Page"),
 				),
 			body: Column(
 				children: <Widget>[
@@ -20,10 +20,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('lot.jpg'),
+              					backgroundImage: AssetImage('rfts.jpg'),
               					),
-              				title: Text("Legends of Tomrrow"),
-              				subtitle: Text("Top Tier Series. Constantine stay undefeated.")
+              				title: Text("Reach for the stars - Major Lazer"),
+              				subtitle: Text("Reach for the stars, first you got to have a vision. Reach for the highest, if you could see it, you could be it"),
               				),
 
 						),
@@ -36,10 +36,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('arrow.jpg'),
+              					backgroundImage: AssetImage('btm.jpg'),
               					),
-              				title: Text("Arrow"),
-              				subtitle: Text("The best series I've ever watched. Rewatched all 8 seasons twice. Pretty Bird.")
+              				title: Text("Bigger than me - Big Sean"),
+              				subtitle: Text("All I wanna do is make the city proud, yeah. Wishing all the OGs could see me now, now, now, yeah.")
               				),
 
 						),
@@ -52,10 +52,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('ehc.jpg'),
+              					backgroundImage: AssetImage('wits.jpg'),
               					),
-              				title: Text("Everybody Hates Chris"),
-              				subtitle: Text("Funniest series I've ever watched. Chris Rock, kudos.")
+              				title: Text("Written in the stars - Tinie Tempeh"),
+              				subtitle: Text("Written in the stars, a million miles away, a message to the man oh... Seasons come and go, but I'll never change, I'm on my way!")
               				),
 
 						),
@@ -68,10 +68,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('gotham.jpg'),
+              					backgroundImage: AssetImage('btl.jpg'),
               					),
-              				title: Text("Gotham"),
-              				subtitle: Text("How can you not love Gotham? It's perfect! Everything, cast, plot, settings. *Chefs Kiss*")
+              				title: Text("10,000 reasons - Matt Redman "),
+              				subtitle: Text("And on that day when my strength is failling, the end draws near and my time has come. Still, my soul will sing your praise unending. Ten thousand years and then forevermore. ")
               				),
 
 						),
@@ -84,10 +84,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('tsr.jpg'),
+              					backgroundImage: AssetImage('tb.jpg'),
               					),
-              				title: Text("The Shawshank Redemption"),
-              				subtitle: Text("Mildred recommended this movie to me, good movie. Really good.")
+              				title: Text("The blessing - Kari Jobe"),
+              				subtitle: Text("The Lord bless you and keep you, make his face shine upon you and be gracious to you.")
               				),
 
 						),
@@ -100,10 +100,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('ttp.jpg'),
+              					backgroundImage: AssetImage('roots.jpg'),
               					),
-              				title: Text("The Tomorrow People"),
-              				subtitle: Text("Watched this when I was 12. Been obessed ever since.")
+              				title: Text("Roots - Imagine Dragon"),
+              				subtitle: Text("Had to lose my way to know which road to take... I'm going back to my roots")
               				),
 
 						),
@@ -116,10 +116,10 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('tsv.jpg'),
+              					backgroundImage: AssetImage('colors.png'),
               					),
-              				title: Text("Silicon Valley"),
-              				subtitle: Text("Season 1 of this series is a must watch for all tech student entreprenuers. No cap.")
+              				title: Text("Zombie - Kwesi Arthur"),
+              				subtitle: Text("Can't believe say after all these years we no strengthen the bond...")
               				),
 
 						),
@@ -129,7 +129,7 @@ class Movies extends StatelessWidget {
 				floatingActionButton: FloatingActionButton.extended(
 						backgroundColor: Colors.blue,
 						icon: const Icon(Icons.add),
-						label: const Text("Add Movies"),
+						label: const Text("Add Songs"),
 						onPressed: () {
 							Get.bottomSheet(
 								Container(
@@ -143,7 +143,7 @@ class Movies extends StatelessWidget {
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
                ),
-               hintText: "Type movie name",
+               hintText: "Type song name",
                hintStyle: TextStyle(color: Colors.grey),
              ),
            ),
@@ -153,7 +153,7 @@ class Movies extends StatelessWidget {
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
                ),
-               hintText: "Type movie description",
+               hintText: "Type song description",
                hintStyle: TextStyle(color: Colors.grey),
              ),
            ),
