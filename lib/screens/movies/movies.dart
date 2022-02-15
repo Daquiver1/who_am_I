@@ -143,7 +143,7 @@ class Movies extends StatelessWidget {
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
                ),
-               hintText: "Type name",
+               hintText: "Type movie name",
                hintStyle: TextStyle(color: Colors.grey),
              ),
            ),
@@ -153,7 +153,7 @@ class Movies extends StatelessWidget {
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
                ),
-               hintText: "Type description",
+               hintText: "Type movie description",
                hintStyle: TextStyle(color: Colors.grey),
              ),
            ),
