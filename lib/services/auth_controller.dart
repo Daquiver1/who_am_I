@@ -97,7 +97,8 @@ class AuthController extends GetxController {
     }
   }
 
-  void signOut() async {
+   signOut() async {
     await auth.signOut();
+    print("User has been signed out");
   }
 }

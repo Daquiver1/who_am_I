@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:who_am_i/screens/movies/movies.dart';
 import 'package:who_am_i/screens/passions/passions.dart';
 import 'package:who_am_i/screens/songs/songs.dart';
+import 'package:who_am_i/services/auth_constants.dart';
+
 
 class MyHomePage extends StatelessWidget {
 	@override
@@ -10,7 +12,17 @@ class MyHomePage extends StatelessWidget {
 		return Scaffold(
 			backgroundColor: Colors.lightBlue[200],
 			appBar: AppBar(
-				title: Text("Home Page")),
+				title: Text("Home Page"),
+				actions: <Widget>[
+            FlatButton.icon(
+              icon: Icon(Icons.person),
+              label: Text("Logout"),
+              onPressed: () async {
+                await authController.signOut();
+              },
+            ),
+          ],
+				),
 				body: Center(
 					child: Column(
 					mainAxisAlignment: MainAxisAlignment.center,
