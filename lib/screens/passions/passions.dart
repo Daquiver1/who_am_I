@@ -18,7 +18,7 @@ class Passion extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('arsenal.jpg'),
+              					//backgroundImage: AssetImage('arsenal.jpg'),
               					),
               				title: Text("The Arsenal"),
               				subtitle: Text("Inexplicable.")
@@ -34,7 +34,7 @@ class Passion extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('bball.jpg'),
+              					//backgroundImage: AssetImage('bball.jpg'),
               					),
               				title: Text("Basketball"),
               				subtitle: Text("Education is important, but basketball is importanter.")
@@ -50,7 +50,7 @@ class Passion extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('philosophy.jpg'),
+              					//backgroundImage: AssetImage('philosophy.jpg'),
               					),
               				title: Text("Philosophy, abtract thinking"),
               				subtitle: Text("What's the point of this? Why...")
@@ -66,7 +66,7 @@ class Passion extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('growth.jpg'),
+              					//backgroundImage: AssetImage('growth.jpg'),
               					),
               				title: Text("Growth"),
               				subtitle: Text("It's in your power to be the best you can, and you choose not to... I'll never understand humans.")

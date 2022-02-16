@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:who_am_i/screens/home/home.dart';
 import 'package:get/get.dart';
-import 'package:who_am_i/screens/calc/calc.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:who_am_i/services/auth_controller.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  ).then((value) {
+    Get.put(AuthController());
+  });
   runApp(const MyApp());
 }
 
@@ -14,8 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Calc(),
+      debugShowCheckedModeBanner: false,
+      home: const CircularProgressIndicator(),
     );
   }
 }
-

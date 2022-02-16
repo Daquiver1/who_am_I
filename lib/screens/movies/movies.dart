@@ -20,7 +20,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('lot.jpg'),
+              					//backgroundImage: AssetImage('lot.jpg'),
               					),
               				title: Text("Legends of Tomrrow"),
               				subtitle: Text("Top Tier Series. Constantine stay undefeated.")
@@ -36,7 +36,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('arrow.jpg'),
+              					//backgroundImage: AssetImage('arrow.jpg'),
               					),
               				title: Text("Arrow"),
               				subtitle: Text("The best series I've ever watched. Rewatched all 8 seasons twice. Pretty Bird.")
@@ -52,7 +52,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('ehc.jpg'),
+              					//backgroundImage: AssetImage('ehc.jpg'),
               					),
               				title: Text("Everybody Hates Chris"),
               				subtitle: Text("Funniest series I've ever watched. Chris Rock, kudos.")
@@ -68,7 +68,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('gotham.jpg'),
+              					//backgroundImage: AssetImage('gotham.jpg'),
               					),
               				title: Text("Gotham"),
               				subtitle: Text("How can you not love Gotham? It's perfect! Everything, cast, plot, settings. *Chefs Kiss*")
@@ -100,7 +100,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('ttp.jpg'),
+              					//backgroundImage: AssetImage('ttp.jpg'),
               					),
               				title: Text("The Tomorrow People"),
               				subtitle: Text("Watched this when I was 12. Been obessed ever since.")
@@ -116,7 +116,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('tsv.jpg'),
+              					//backgroundImage: AssetImage('tsv.jpg'),
               					),
               				title: Text("Silicon Valley"),
               				subtitle: Text("Season 1 of this series is a must watch for all tech student entreprenuers. No cap.")
