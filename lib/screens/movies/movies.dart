@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:who_am_i/shared/constants.dart';
 
 
 class Movies extends StatelessWidget {
@@ -84,7 +83,7 @@ class Movies extends StatelessWidget {
 							leading: CircleAvatar(
 								radius: 25.0,
               					backgroundColor: Colors.brown[100],
-              					backgroundImage: AssetImage('tsr.jpg'),
+              					//backgroundImage: AssetImage('tsr.jpg'),
               					),
               				title: Text("The Shawshank Redemption"),
               				subtitle: Text("Mildred recommended this movie to me, good movie. Really good.")

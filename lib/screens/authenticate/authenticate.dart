@@ -1,5 +1,6 @@
 import 'package:who_am_i/services/auth_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:who_am_i/shared/loading.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -12,10 +13,11 @@ class _RegisterState extends State<Register> {
   final TextEditingController _emailController = TextEditingController();
 
   final TextEditingController _passwordController = TextEditingController();
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       appBar: AppBar(
         title: const Text("Sign up/Login"),
       ),
@@ -36,15 +38,23 @@ class _RegisterState extends State<Register> {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  authController.register(_emailController.text.trim(),
+                  setState(() => loading = true);
+                  dynamic result = await authController.register(_emailController.text.trim(),
                       _passwordController.text.trim());
+                  if (result == null){
+                    setState(() => loading = false);
+                  }
                 },
                 child: const Text("Sign Up"),
               ),
               ElevatedButton(
                 onPressed: () async {
-                  authController.login(_emailController.text.trim(),
+                  setState(() => loading = true);
+                  var result = await authController.login(_emailController.text.trim(),
                       _passwordController.text.trim());
+                  if (result == null){
+                    setState(() => loading = false);
+                  }
                 },
                 child: const Text("Login"),
               ),

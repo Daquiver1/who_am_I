@@ -52,7 +52,7 @@ class AuthController extends GetxController {
     }
   }
 
-  void signInWithGoogle() async {
+  dynamic signInWithGoogle() async {
     try {
       GoogleSignInAccount? googleSignInAccount = await googleSign.signIn();
 
@@ -79,25 +79,26 @@ class AuthController extends GetxController {
     }
   }
 
-  void register(String email, password) async {
+  Future register(String email, password) async {
     try {
       await auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      print("User has been signed in");
     } catch (firebaseAuthException) {
       print(firebaseAuthException);
+      return null;
     }
   }
 
-  void login(String email, password) async {
+  Future login(String email, password) async {
     try {
       await auth.signInWithEmailAndPassword(email: email, password: password);
     } catch (firebaseAuthException) {
       print(firebaseAuthException);
+      return null;
     }
   }
 
-   signOut() async {
+ signOut() async {
     await auth.signOut();
     print("User has been signed out");
   }
