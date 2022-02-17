@@ -16,7 +16,7 @@ class PassionTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
             backgroundColor: Colors.brown[100],
-            //backgroundImage: AssetImage('lot.jpg'),
+            backgroundImage: AssetImage('vv.jpg'),
           ),
           title: Text(passions.passion_name.toString()),
           subtitle: Text(passions.passion_description.toString()),
