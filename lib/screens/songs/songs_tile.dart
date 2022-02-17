@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:who_am_i/services/db.dart';
 import 'package:who_am_i/services/dbmodel.dart';
 
 class SongTile extends StatelessWidget {
@@ -12,13 +13,23 @@ class SongTile extends StatelessWidget {
       child: Container(
         color: Colors.blue[50],
         child: ListTile(
-            leading: CircleAvatar(
-              radius: 25.0,
-              backgroundColor: Colors.brown[100],
-              //backgroundImage: AssetImage('lot.jpg'),
+          leading: CircleAvatar(
+            radius: 25.0,
+            backgroundColor: Colors.brown[100],
+            //backgroundImage: AssetImage('lot.jpg'),
+          ),
+          title: Text(songs.song_name.toString()),
+          subtitle: Text(songs.song_description.toString()),
+          trailing: IconButton(
+            onPressed: () {
+              FirestoreDb.deletePassion(songs.documentId!);
+            },
+            icon: const Icon(
+              Icons.delete,
+              color: Colors.blue,
             ),
-            title: Text(songs.song_name.toString()),
-            subtitle: Text(songs.song_description.toString())),
+          ),
+        ),
       ),
     );
   }
