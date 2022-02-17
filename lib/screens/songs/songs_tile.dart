@@ -17,7 +17,7 @@ class SongTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
             backgroundColor: Colors.brown[100],
-            backgroundImage: AssetImage("vv.jpg");
+            backgroundImage: AssetImage("vv.jpg"),
           ),
           title: Text(songs.song_name.toString()),
           subtitle: Text(songs.song_description.toString()),
