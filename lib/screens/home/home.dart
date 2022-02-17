@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
             Text(
                 "Hey, my name is Christian. Clearly I'm bored and have too much time on my hands."),
             Text(
-                "Anyways, click on the buttons below to find out my favorite activites."),
+                "Anyways, click on the buttons below to upload your favoirte activites."),
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () => Get.to(Movies()),
