@@ -16,7 +16,7 @@ class MovieTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
             backgroundColor: Colors.brown[100],
-            //backgroundImage: AssetImage('lot.jpg'),
+            backgroundImage: AssetImage('vv.jpg'),
           ),
           title: Text(movie.movie_name.toString()),
           subtitle: Text(movie.movie_description.toString()),
