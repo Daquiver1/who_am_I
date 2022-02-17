@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:who_am_i/services/db.dart';
 import 'package:who_am_i/services/dbmodel.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SongTile extends StatelessWidget {
   final MainModel songs;
@@ -16,7 +17,7 @@ class SongTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
             backgroundColor: Colors.brown[100],
-            //backgroundImage: AssetImage('lot.jpg'),
+            backgroundImage: AssetImage("vv.jpg");
           ),
           title: Text(songs.song_name.toString()),
           subtitle: Text(songs.song_description.toString()),
