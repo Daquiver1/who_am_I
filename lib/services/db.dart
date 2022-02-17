@@ -16,15 +16,15 @@ class FirestoreDb {
     });
   }
 
-  // // Delete Movie
-  // static deleteMovie(MainModel mainmodel) async {
-  //   await firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('Movies')
-  //       .doc(documentId)
-  //       .delete();
-  // }
+  // Delete Movie
+  static deleteMovie(String documentId) async {
+    await firebaseFirestore
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Movies')
+        .doc(documentId)
+        .delete();
+  }
 
   // Add Song
   static addSong(MainModel mainmodel) async {
@@ -39,15 +39,15 @@ class FirestoreDb {
     });
   }
 
-  // // Delete Song
-  // static deleteSong(MainModel mainmodel) async {
-  //   await firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('Songs')
-  //       /.doc(documentId)
-  //       .delete();
-  // }
+  // Delete Song
+  static deleteSong(String documentId) async {
+    await firebaseFirestore
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Songs')
+        .doc(documentId)
+        .delete();
+  }
 
   // Add Passion
   static addPassion(MainModel mainmodel) async {
@@ -62,15 +62,15 @@ class FirestoreDb {
     });
   }
 
-  // // Delete Passion
-  // static deletePassion(MainModel mainmodel) async {
-  //   await firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('Passion')
-  //       .doc(documentId)
-  //       .delete();
-  // }
+  // Delete Passion
+  static deletePassion(String documentId) async {
+    await firebaseFirestore
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Passion')
+        .doc(documentId)
+        .delete();
+  }
 
   // Streams
 
