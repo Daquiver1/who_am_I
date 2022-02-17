@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:who_am_i/services/db.dart';
+import 'package:who_am_i/services/dbmodel.dart';
+import '../../services/db_controller.dart';
 
 class Passion extends StatelessWidget {
+
+	final TextEditingController passionName = TextEditingController();
+
+  final TextEditingController passionDesc = TextEditingController();
+
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
@@ -88,6 +96,7 @@ class Passion extends StatelessWidget {
                       children: [
            // TextField for giving some Input
            TextField(
+           	controller: passionName,
              decoration: InputDecoration(
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
@@ -98,6 +107,7 @@ class Passion extends StatelessWidget {
            ),
            SizedBox(height: 10),
             TextField(
+            	controller: passionDesc,
              decoration: InputDecoration(
                border: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.blue),
@@ -111,8 +121,16 @@ class Passion extends StatelessWidget {
            //Button for adding items
            RaisedButton(
              color: Colors.black,
-             child: Text("ADD",style: TextStyle(color: Colors.white)),
-             onPressed: () => null,
+             child: Text("Add passion",style: TextStyle(color: Colors.white)),
+             onPressed:  () async {
+                          final mainModel = MainModel(
+                              passion_name: passionName.text.trim(), 
+                              passion_description: passionDesc.text.trim()
+                              );
+                          await FirestoreDb.addPassion(mainModel);
+                          passionName.clear();
+                          passionDesc.clear();
+                        },
              ),
          ],
                     ),

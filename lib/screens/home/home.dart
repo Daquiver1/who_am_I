@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:who_am_i/screens/movies/movie_list.dart';
+import 'package:who_am_i/screens/movies/movies.dart';
 import 'package:who_am_i/screens/passions/passions.dart';
 import 'package:who_am_i/screens/songs/songs.dart';
 import 'package:who_am_i/services/constants.dart';
