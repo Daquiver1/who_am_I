@@ -23,7 +23,7 @@ class MainModel {
     documentId = documentSnapshot.id;
     movie_description = documentSnapshot["Movie Description"];
     movie_name = documentSnapshot["Movie name"];
-    createdOn = documentSnapshot["createdon"];
+    createdOn = documentSnapshot["Created On"];
     song_name = documentSnapshot["Song Name"];
     song_description = documentSnapshot["Song Description"];
     passion_name = documentSnapshot["Passion Name"];

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:who_am_i/screens/movies/movie_list.dart';
-import 'package:who_am_i/screens/passions/passions.dart';
-import 'package:who_am_i/screens/songs/songs.dart';
+import 'package:who_am_i/screens/passions/passions_list.dart';
+import 'package:who_am_i/screens/songs/songs_list.dart';
 import 'package:who_am_i/services/constants.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () => Get.to(Passion()),
+              onPressed: () => Get.to(Passions()),
               child: Text('Favorite Activites'),
             ),
             SizedBox(height: 20.0),

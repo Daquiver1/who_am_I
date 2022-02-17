@@ -10,9 +10,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Movies')
         .add({
-      'Movie name': mainmodel.movie_name,
-      'Movie description': mainmodel.movie_description,
-      'Created on': Timestamp.now(),
+      'Movie Name': mainmodel.movie_name,
+      'Movie Description': mainmodel.movie_description,
+      'Created On': Timestamp.now(),
     });
   }
 
@@ -33,9 +33,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Songs')
         .add({
-      'Song name': mainmodel.song_name,
-      'Song description': mainmodel.song_description,
-      'Created on': Timestamp.now(),
+      'Song Name': mainmodel.song_name,
+      'Song Description': mainmodel.song_description,
+      'Created On': Timestamp.now(),
     });
   }
 
@@ -56,9 +56,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Passion')
         .add({
-      'Passion name': mainmodel.passion_name,
-      'Passion description': mainmodel.passion_description,
-      'Created on': Timestamp.now(),
+      'Passion Name': mainmodel.passion_name,
+      'Passion Description': mainmodel.passion_description,
+      'Created On': Timestamp.now(),
     });
   }
 
@@ -71,6 +71,8 @@ class FirestoreDb {
   //       .doc(documentId)
   //       .delete();
   // }
+
+  // Streams
 
   static Stream<List<MainModel>> movieStream() {
     return firebaseFirestore
@@ -131,26 +133,4 @@ class FirestoreDb {
       return passions;
     });
   }
-
-  // static updateStatus(bool isDone, documentId) {
-  //   firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('todos')
-  //       .doc(documentId)
-  //       .update(
-  //     {
-  //       'isDone': isDone,
-  //     },
-  //   );
-  // }
-
-  // static deleteTodo(String documentId) {
-  //   firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('todos')
-  //       .doc(documentId)
-  //       .delete();
-  // }
 }
