@@ -2,12 +2,12 @@ import 'package:who_am_i/services/db.dart';
 import 'package:who_am_i/services/dbmodel.dart';
 import 'package:get/get.dart';
 
-// class TodoController extends GetxController {
-//   Rx<List<TodoModel>> todoList = Rx<List<TodoModel>>([]);
-//   List<TodoModel> get todos => todoList.value;
+class MovieController extends GetxController {
+  Rx<List<MainModel>> movieList = Rx<List<MainModel>>([]);
+  List<MainModel> get movies => movieList.value;
 
-//   @override
-//   void onReady() {
-//     todoList.bindStream(FirestoreDb.todoStream());
-//   }
-// }
+  @override
+  void onReady() {
+    movieList.bindStream(FirestoreDb.movieStream());
+  }
+}

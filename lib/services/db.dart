@@ -72,22 +72,25 @@ class FirestoreDb {
   //       .delete();
   // }
 
-  // static Stream<List<TodoModel>> todoStream() {
-  //   return firebaseFirestore
-  //       .collection('users')
-  //       .doc(auth.currentUser!.uid)
-  //       .collection('Movies')
-  //       .snapshots()
-  //       .map((QuerySnapshot query) {
-  //     List<TodoModel> todos = [];
-  //     for (var todo in query.docs) {
-  //       final todoModel =
-  //           TodoModel.fromDocumentSnapshot(documentSnapshot: todo);
-  //       todos.add(todoModel);
-  //     }
-  //     return todos;
-  //   });
-  // }
+  static Stream<List<MainModel>> movieStream() {
+    return firebaseFirestore
+        // The pathway
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Movies')
+        .snapshots()
+        .map((QuerySnapshot query) {
+      // QuerySnapshot contins all the instances stored
+      List<MainModel> movies = [];
+      for (var movie in query.docs) {
+        final mainModel =
+            MainModel.fromDocumentSnapshot(documentSnapshot: movie);
+        movies.add(mainModel);
+      }
+      print("Printed Sucessfully");
+      return movies;
+    });
+  }
 
   // static updateStatus(bool isDone, documentId) {
   //   firebaseFirestore
