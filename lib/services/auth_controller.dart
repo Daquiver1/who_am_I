@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:who_am_i/services/auth_constants.dart';
+import 'package:who_am_i/services/constants.dart';
 import 'package:who_am_i/screens/home/home.dart';
 import 'package:who_am_i/screens/authenticate/authenticate.dart';
 import 'package:get/get.dart';
@@ -98,7 +98,7 @@ class AuthController extends GetxController {
     }
   }
 
- signOut() async {
+  signOut() async {
     await auth.signOut();
     print("User has been signed out");
   }
