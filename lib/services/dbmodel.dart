@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MainModel {
   String? documentId;
-  late Timestamp createdOn;
+  late Timestamp created_on;
   late String? movie_name;
   late String? movie_description;
   late String? song_name;
@@ -19,13 +19,26 @@ class MainModel {
     this.passion_description,
   });
 
-  MainModel.fromDocumentSnapshot({required DocumentSnapshot documentSnapshot}) {
+  MainModel.fromMovieDocumentSnapshot(
+      {required DocumentSnapshot documentSnapshot}) {
     documentId = documentSnapshot.id;
+    created_on = documentSnapshot["Created On"];
+    movie_name = documentSnapshot["Movie Name"];
     movie_description = documentSnapshot["Movie Description"];
-    movie_name = documentSnapshot["Movie name"];
-    createdOn = documentSnapshot["Created On"];
+  }
+
+  MainModel.fromSongDocumentSnapshot(
+      {required DocumentSnapshot documentSnapshot}) {
+    documentId = documentSnapshot.id;
+    created_on = documentSnapshot["Created On"];
     song_name = documentSnapshot["Song Name"];
     song_description = documentSnapshot["Song Description"];
+  }
+
+  MainModel.fromPassionDocumentSnapshot(
+      {required DocumentSnapshot documentSnapshot}) {
+    documentId = documentSnapshot.id;
+    created_on = documentSnapshot["Created On"];
     passion_name = documentSnapshot["Passion Name"];
     passion_description = documentSnapshot["Passion Description"];
   }

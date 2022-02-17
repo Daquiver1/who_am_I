@@ -17,13 +17,12 @@ class Passions extends StatelessWidget {
         builder: (PassionController passionController) {
           return Scaffold(
             appBar: AppBar(
-              title: Text("Songs Page"),
+              title: Text("Passions Page"),
             ),
             body: ListView.builder(
               itemCount: passionController.passions.length,
               itemBuilder: (BuildContext context, int index) {
-                print("What is my name?");
-                print(passionController.passions[index].movie_name);
+                print(passionController.passions[index].passion_name);
                 //print(todoController.todos[index].movie_description);
                 return PassionTile(passionController.passions[index]);
               },
@@ -31,7 +30,7 @@ class Passions extends StatelessWidget {
             floatingActionButton: FloatingActionButton.extended(
                 backgroundColor: Colors.blue,
                 icon: const Icon(Icons.add),
-                label: const Text("Add Songs"),
+                label: const Text("Add Passion"),
                 onPressed: () {
                   Get.bottomSheet(
                       Container(
@@ -46,7 +45,7 @@ class Passions extends StatelessWidget {
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(color: Colors.blue),
                                   ),
-                                  hintText: "Type song name",
+                                  hintText: "Type passion name",
                                   hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
@@ -57,7 +56,7 @@ class Passions extends StatelessWidget {
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(color: Colors.blue),
                                   ),
-                                  hintText: "Type song description",
+                                  hintText: "Type passion description",
                                   hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
@@ -66,14 +65,14 @@ class Passions extends StatelessWidget {
                               //Button for adding items
                               RaisedButton(
                                 color: Colors.black,
-                                child: Text("Add Songs",
+                                child: Text("Add Passion",
                                     style: TextStyle(color: Colors.white)),
                                 onPressed: () async {
                                   final mainModel = MainModel(
-                                      song_name: passionName.text.trim(),
-                                      song_description:
+                                      passion_name: passionName.text.trim(),
+                                      passion_description:
                                           passionDesc.text.trim());
-                                  await FirestoreDb.addMovie(mainModel);
+                                  await FirestoreDb.addPassion(mainModel);
                                   passionName.clear();
                                   passionDesc.clear();
                                 },

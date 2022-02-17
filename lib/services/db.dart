@@ -10,9 +10,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Movies')
         .add({
+      'Created On': Timestamp.now(),
       'Movie Name': mainmodel.movie_name,
       'Movie Description': mainmodel.movie_description,
-      'Created On': Timestamp.now(),
     });
   }
 
@@ -33,9 +33,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Songs')
         .add({
+      'Created On': Timestamp.now(),
       'Song Name': mainmodel.song_name,
       'Song Description': mainmodel.song_description,
-      'Created On': Timestamp.now(),
     });
   }
 
@@ -56,9 +56,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('Passion')
         .add({
+      'Created On': Timestamp.now(),
       'Passion Name': mainmodel.passion_name,
       'Passion Description': mainmodel.passion_description,
-      'Created On': Timestamp.now(),
     });
   }
 
@@ -85,8 +85,9 @@ class FirestoreDb {
       // QuerySnapshot contins all the instances stored
       List<MainModel> movies = [];
       for (var movie in query.docs) {
+        print(movie.data());
         final mainModel =
-            MainModel.fromDocumentSnapshot(documentSnapshot: movie);
+            MainModel.fromMovieDocumentSnapshot(documentSnapshot: movie);
         movies.add(mainModel);
       }
       print("Movies stored Sucessfully");
@@ -106,7 +107,7 @@ class FirestoreDb {
       List<MainModel> songs = [];
       for (var song in query.docs) {
         final mainModel =
-            MainModel.fromDocumentSnapshot(documentSnapshot: song);
+            MainModel.fromSongDocumentSnapshot(documentSnapshot: song);
         songs.add(mainModel);
       }
       print("Songs stored Sucessfully");
@@ -126,7 +127,7 @@ class FirestoreDb {
       List<MainModel> passions = [];
       for (var passion in query.docs) {
         final mainModel =
-            MainModel.fromDocumentSnapshot(documentSnapshot: passion);
+            MainModel.fromPassionDocumentSnapshot(documentSnapshot: passion);
         passions.add(mainModel);
       }
       print("Passions stored Sucessfully");

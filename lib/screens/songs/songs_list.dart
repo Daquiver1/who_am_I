@@ -23,7 +23,7 @@ class Songs extends StatelessWidget {
               itemCount: songController.songs.length,
               itemBuilder: (BuildContext context, int index) {
                 print("What is my name?");
-                print(songController.songs[index].movie_name);
+                print(songController.songs[index].song_name);
                 //print(todoController.todos[index].movie_description);
                 return SongTile(songController.songs[index]);
               },
@@ -72,7 +72,7 @@ class Songs extends StatelessWidget {
                                   final mainModel = MainModel(
                                       song_name: songName.text.trim(),
                                       song_description: songDesc.text.trim());
-                                  await FirestoreDb.addMovie(mainModel);
+                                  await FirestoreDb.addSong(mainModel);
                                   songName.clear();
                                   songDesc.clear();
                                 },
