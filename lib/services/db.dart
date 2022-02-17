@@ -11,8 +11,8 @@ class FirestoreDb {
         .collection('Movies')
         .add({
       'Movie name': mainmodel.movie_name,
-      'Movie Description': mainmodel.movie_description,
-      'createdon': Timestamp.now(),
+      'Movie description': mainmodel.movie_description,
+      'Created on': Timestamp.now(),
     });
   }
 
@@ -34,8 +34,8 @@ class FirestoreDb {
         .collection('Songs')
         .add({
       'Song name': mainmodel.song_name,
-      'Song Description': mainmodel.song_description,
-      'createdon': Timestamp.now(),
+      'Song description': mainmodel.song_description,
+      'Created on': Timestamp.now(),
     });
   }
 
@@ -57,8 +57,8 @@ class FirestoreDb {
         .collection('Passion')
         .add({
       'Passion name': mainmodel.passion_name,
-      'Passion Description': mainmodel.passion_description,
-      'createdon': Timestamp.now(),
+      'Passion description': mainmodel.passion_description,
+      'Created on': Timestamp.now(),
     });
   }
 
@@ -87,8 +87,48 @@ class FirestoreDb {
             MainModel.fromDocumentSnapshot(documentSnapshot: movie);
         movies.add(mainModel);
       }
-      print("Printed Sucessfully");
+      print("Movies stored Sucessfully");
       return movies;
+    });
+  }
+
+  static Stream<List<MainModel>> songStream() {
+    return firebaseFirestore
+        // The pathway
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Songs')
+        .snapshots()
+        .map((QuerySnapshot query) {
+      // QuerySnapshot contins all the instances stored
+      List<MainModel> songs = [];
+      for (var song in query.docs) {
+        final mainModel =
+            MainModel.fromDocumentSnapshot(documentSnapshot: song);
+        songs.add(mainModel);
+      }
+      print("Songs stored Sucessfully");
+      return songs;
+    });
+  }
+
+  static Stream<List<MainModel>> passionStream() {
+    return firebaseFirestore
+        // The pathway
+        .collection('users')
+        .doc(auth.currentUser!.uid)
+        .collection('Passion')
+        .snapshots()
+        .map((QuerySnapshot query) {
+      // QuerySnapshot contins all the instances stored
+      List<MainModel> passions = [];
+      for (var passion in query.docs) {
+        final mainModel =
+            MainModel.fromDocumentSnapshot(documentSnapshot: passion);
+        passions.add(mainModel);
+      }
+      print("Passions stored Sucessfully");
+      return passions;
     });
   }
 

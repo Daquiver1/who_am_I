@@ -24,9 +24,9 @@ class MainModel {
     movie_description = documentSnapshot["Movie Description"];
     movie_name = documentSnapshot["Movie name"];
     createdOn = documentSnapshot["createdon"];
-    // song_name = documentSnapshot["Song Name"];
-    // song_description = documentSnapshot["Song Description"];
-    // passion_name = documentSnapshot["Passion Name"];
-    // passion_description = documentSnapshot["Passion Description"];
+    song_name = documentSnapshot["Song Name"];
+    song_description = documentSnapshot["Song Description"];
+    passion_name = documentSnapshot["Passion Name"];
+    passion_description = documentSnapshot["Passion Description"];
   }
 }
