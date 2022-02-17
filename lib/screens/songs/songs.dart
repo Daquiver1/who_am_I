@@ -31,10 +31,20 @@ class Songs extends StatelessWidget {
               					),
               				title: Text("Reach for the stars - Major Lazer"),
               				subtitle: Text("Reach for the stars, first you got to have a vision. Reach for the highest, if you could see it, you could be it"),
+              				// trailing: IconButton(
+              				// onPressed: () {
+                  //     FirestoreDb.deleteSong(
+                  //         _mainModel.documentId!);
+                  //   },
+                  //   	icon: const Icon(
+                  //     Icons.delete,
+                  //     color: Colors.blue,
+                  //   ),
+              				// ),
+              				),
               				),
 
 						),
-					),
 				],
 			),
 				floatingActionButton: FloatingActionButton.extended(

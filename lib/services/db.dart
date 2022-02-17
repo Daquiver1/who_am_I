@@ -3,6 +3,7 @@ import 'package:who_am_i/services/constants.dart';
 import 'package:who_am_i/services/dbmodel.dart';
 
 class FirestoreDb {
+  // Add Movie
   static addMovie(MainModel mainmodel) async {
     await firebaseFirestore
         .collection('users')
@@ -15,6 +16,17 @@ class FirestoreDb {
     });
   }
 
+  // // Delete Movie
+  // static deleteMovie(MainModel mainmodel) async {
+  //   await firebaseFirestore
+  //       .collection('users')
+  //       .doc(auth.currentUser!.uid)
+  //       .collection('Movies')
+  //       .doc(documentId)
+  //       .delete();
+  // }
+
+  // Add Song
   static addSong(MainModel mainmodel) async {
     await firebaseFirestore
         .collection('users')
@@ -27,6 +39,17 @@ class FirestoreDb {
     });
   }
 
+  // // Delete Song
+  // static deleteSong(MainModel mainmodel) async {
+  //   await firebaseFirestore
+  //       .collection('users')
+  //       .doc(auth.currentUser!.uid)
+  //       .collection('Songs')
+  //       /.doc(documentId)
+  //       .delete();
+  // }
+
+  // Add Passion
   static addPassion(MainModel mainmodel) async {
     await firebaseFirestore
         .collection('users')
@@ -38,6 +61,16 @@ class FirestoreDb {
       'createdon': Timestamp.now(),
     });
   }
+
+  // // Delete Passion
+  // static deletePassion(MainModel mainmodel) async {
+  //   await firebaseFirestore
+  //       .collection('users')
+  //       .doc(auth.currentUser!.uid)
+  //       .collection('Passion')
+  //       .doc(documentId)
+  //       .delete();
+  // }
 
   // static Stream<List<TodoModel>> todoStream() {
   //   return firebaseFirestore

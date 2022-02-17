@@ -29,9 +29,20 @@ class Movies extends StatelessWidget {
                   ),
                   title: Text("Legends of Tomrrow"),
                   subtitle:
-                      Text("Top Tier Series. Constantine stay undefeated.")),
+                      Text("Top Tier Series. Constantine stay undefeated."),
+                  // trailing: IconButton(
+                  // onPressed: () {
+                  //     FirestoreDb.deleteMovie(
+                  //         _mainModel.documentId!);
+                  //   },
+                  //     icon: const Icon(
+                  //     Icons.delete,
+                  //     color: Colors.blue,
+                  //   ),
+                  //     ),
+                  ),
+                      ),
             ),
-          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
